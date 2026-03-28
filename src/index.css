@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 /* Realty Trust Company Design System
    Navy/Forest/Sage/Gold palette - Trustworthy, Elegant, No-Pressure */
@@ -220,5 +220,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--forest));
 }
-
 

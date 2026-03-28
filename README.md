@@ -19,25 +19,25 @@ Marketing website for Realty Trust Company (St. Louis, MO) focused on a no-press
 Install dependencies:
 
 ```bash
-yarn
+npm ci
 ```
 
 Run the dev server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Build for production:
 
 ```bash
-yarn build
+npm run build
 ```
 
 Lint:
 
 ```bash
-yarn lint
+npm run lint
 ```
 
 ## Project Structure

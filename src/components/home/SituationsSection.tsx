@@ -13,12 +13,12 @@ import {
 import { Button } from "@/components/ui/button";
 
 // Images imports
-import NursingHomeImg from "./pictures/NursingSituation.jpg";
-import InheritedImg from "./pictures/Inherited-Property.webp";
-import DivorceImg from "./pictures/divorce.webp";
-import ForeclosureImg from "./pictures/Foreclosure.jpg";
-import RelocationImg from "./pictures/jobRelocation.webp";
-import AsIsImg from "./pictures/as-ItProperty.jpg";
+import NursingHomeImg from "./Pictures/NursingSituation.jpg";
+import InheritedImg from "./Pictures/Inherited-Property.webp";
+import DivorceImg from "./Pictures/divorce.webp";
+import ForeclosureImg from "./Pictures/Foreclosure.jpg";
+import RelocationImg from "./Pictures/jobRelocation.webp";
+import AsIsImg from "./Pictures/as-ItProperty.jpg";
 
 const situations = [
   {
