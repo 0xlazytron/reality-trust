@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* Realty Trust Company Design System
+   Navy/Forest/Sage/Gold palette - Trustworthy, Elegant, No-Pressure */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --navy: 220 44% 19%;
+    --forest: 152 33% 26%;
+    --sage: 155 17% 49%;
+    --cream: 40 23% 96%;
+    --gold: 32 51% 62%;
+    --rust: 18 47% 57%;
+    
+    /* Semantic Tokens */
+    --background: 40 23% 96%;
+    --foreground: 0 0% 17%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 17%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+    
+    --primary: 152 33% 26%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 44% 19%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 35%;
+    
+    --accent: 32 51% 62%;
+    --accent-foreground: 220 44% 19%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 152 15% 85%;
+    --input: 152 15% 85%;
+    --ring: 152 33% 26%;
+    
+    --radius: 0.75rem;
+    
+    /* Text Colors */
+    --text-dark: 0 0% 17%;
+    --text-light: 0 0% 35%;
+    
+    /* Blue Color Variations */
+    --blue-light: 220 90% 96%;
+    --blue-medium: 220 60% 92%;
+    --blue-dark: 220 44% 19%;
+    --blue-accent: 220 90% 56%;
+    
+    /* Gradients */
+    --gradient-forest: linear-gradient(135deg, hsl(var(--forest)), hsl(var(--sage)));
+    --gradient-navy: linear-gradient(135deg, hsl(var(--navy)), hsl(220 44% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(40 15% 90%) 100%);
+    --gradient-charity: linear-gradient(135deg, hsl(var(--forest)) 0%, hsl(var(--navy)) 100%);
+    --gradient-blue-light: linear-gradient(135deg, hsl(var(--blue-light)) 0%, hsl(var(--blue-medium)) 100%);
+    --gradient-blue-navy: linear-gradient(135deg, hsl(var(--blue-accent)) 0%, hsl(var(--navy)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-primary: 0 6px 20px hsla(var(--forest), 0.3);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-float: 0 20px 60px rgba(0, 0, 0, 0.15);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 44% 8%;
+    --foreground: 40 23% 96%;
+    
+    --card: 220 44% 12%;
+    --card-foreground: 40 23% 96%;
+    
+    --popover: 220 44% 12%;
+    --popover-foreground: 40 23% 96%;
+    
+    --primary: 152 33% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 155 17% 30%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 30% 18%;
+    --muted-foreground: 40 15% 70%;
+    
+    --accent: 32 51% 62%;
+    --accent-foreground: 220 44% 8%;
+    
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 152 33% 40%;
+    
+    --text-dark: 40 23% 96%;
+    --text-light: 40 15% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold leading-tight;
+  }
+}
+
+@layer utilities {
+  /* Text gradient utility */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-forest to-sage;
+  }
+  
+  /* Custom animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--cream));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c354e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--forest));
+}
+
+
